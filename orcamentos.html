@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Entré Matique</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,100,300,700"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Titan+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="orcamentos.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="container-header">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="logo-container">
+                <img class="logos" src="logos/ppa.png" alt="Logo PPA">
+                <img class="logos" src="logos/peccinin.png" alt="Logo Peccinin">
+            </div>
+
+            <div class="container">
+                <a class="navbar-brand" href=""><span class="fonte-fofa">Entré Matique - </span><span
+                        class="fonte-grossa">Segurança Eletrônica</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-3 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="quemsomos.html">Quem Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="orcamentos.html">Orçamentos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="form-container">
+                                <h2 class="form-title">Solicite seu Orçamento</h2>
+                                <p class="mb-4">Preencha os dados abaixo e receba um orçamento personalizado para sua necessidade</p>
+                                <form id="orcamentoForm">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="nome" class="form-label">Nome Completo *</label>
+                                            <input type="text" class="form-control" id="nome" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="telefone" class="form-label">Telefone/WhatsApp *</label>
+                                            <input type="tel" class="form-control" id="telefone" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="local" class="form-label">Local do Serviço *</label>
+                                            <select class="form-select" id="local" required>
+                                                <option value="" selected disabled>Selecione o tipo de local</option>
+                                                <option value="residencia">Residência</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="empresa">Empresa/Comércio</option>
+                                                <option value="condominio">Condomínio</option>
+                                                <option value="outro">Outro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="endereco" class="form-label">Endereço Completo *</label>
+                                            <input type="text" class="form-control" id="endereco" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="documento" class="form-label">CPF ou CNPJ *</label>
+                                            <input type="text" class="form-control" id="documento" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="servico" class="form-label">Serviço Desejado *</label>
+                                        <select class="form-select" id="servico" required>
+                                            <option value="" selected disabled>Selecione o serviço</option>
+                                            <option value="portoes">Portões Eletrônicos</option>
+                                            <option value="concertinas">Instalação de Concertinas</option>
+                                            <option value="cameras">Câmeras de Segurança</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="comentarios" class="form-label">Comentários ou Informações
+                                            Adicionais</label>
+                                        <textarea class="form-control" id="comentarios" rows="4"
+                                            placeholder="Descreva com mais detalhes o serviço que você precisa..."></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary mt-3">
+                                        <i class="fab fa-whatsapp me-2"></i> Enviar para WhatsApp
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="service-info">
+                                <h3>Nossos Serviços</h3>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check"></i> Portões Eletrônicos Automáticos</li>
+                                    <li><i class="fas fa-check"></i> Instalação de Concertinas</li>
+                                    <li><i class="fas fa-check"></i> Câmeras de Segurança</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="container-footer">
+            <div class="contatos">
+                <h4 class="h4-ctt"><b>Contatos</b></h4>
+                <div class="container-ctt">
+                    <div class="telefones">
+                        <b><span class="h1-ctt">Telefones</span></b>
+                        <br>
+                        <span class="p-ctt">(16) 99277-3131</span>
+                        <br>
+                        <span class="p-ctt">(16) 99133-2202</span>
+                        <br>
+                        <span class="p-ctt">(16) 3011-8774</span>
+                    </div>
+                    <div class="email">
+                        <b><span class="h1-ctt">Email</span></b>
+                        <br>
+                        <span class="p-ctt">entrematique@hotmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="h4-ctt"><b>Redes Sociais</b></h4>
+                <div class="social-buttons">
+                    <a class="btn btn-dark btn-social mx-2"
+                        href="https://www.facebook.com/p/Entr%25C3%25A9-Matique-Port%25C3%25B5es-Eletr%25C3%25B4nicos-e-Seguran%25C3%25A7a-100066817706817/?locale=pt_BR"
+                        target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/suaempresa" target="_blank"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="copyright" style="text-align: center;">
+            &copy; 2025 Entré Matique - Segurança Eletrônica. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Script para envio ao WhatsApp -->
+    <script>
+        document.getElementById('orcamentoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Coletar dados do formulário
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const local = document.getElementById('local').value;
+            const endereco = document.getElementById('endereco').value;
+            const documento = document.getElementById('documento').value;
+            const servico = document.getElementById('servico').value;
+            const comentarios = document.getElementById('comentarios').value;
+
+            // Mapear valores para texto legível
+            const localMap = {
+                'residencia': 'Residência',
+                'apartamento': 'Apartamento',
+                'empresa': 'Empresa/Comércio',
+                'condominio': 'Condomínio',
+                'outro': 'Outro'
+            };
+
+            const servicoMap = {
+                'portoes': 'Portões Eletrônicos',
+                'concertinas': 'Instalação de Concertinas',
+                'cameras': 'Câmeras de Segurança'
+            };
+
+            // Construir mensagem para WhatsApp
+            let mensagem = `*SOLICITAÇÃO DE ORÇAMENTO - Entré Matique*%0A%0A`;
+            mensagem += `*Nome:* ${nome}%0A`;
+            mensagem += `*Email:* ${email}%0A`;
+            mensagem += `*Telefone:* ${telefone}%0A`;
+            mensagem += `*Local:* ${localMap[local]}%0A`;
+            mensagem += `*Endereço:* ${endereco}%0A`;
+            mensagem += `*CPF/CNPJ:* ${documento}%0A`;
+            mensagem += `*Serviço:* ${servicoMap[servico]}%0A`;
+
+            if (comentarios) {
+                mensagem += `*Detalhes:* ${comentarios}%0A`;
+            }
+
+            mensagem += `%0A*Solicito um orçamento para este serviço.*`;
+
+            // Número de WhatsApp da empresa
+            const numeroWhatsApp = '5516993614975';
+
+            // Abrir WhatsApp com a mensagem
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');
+        });
+
+        // Máscara para telefone
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+
+            if (value.length <= 11) {
+                value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+                value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+            }
+
+            e.target.value = value;
+        });
+
+        // Máscara para CPF/CNPJ
+        document.getElementById('documento').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+
+            if (value.length <= 11) {
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            } else {
+                value = value.replace(/^(\d{2})(\d)/, '$1.$2');
+                value = value.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+                value = value.replace(/\.(\d{3})(\d)/, '.$1/$2');
+                value = value.replace(/(\d{4})(\d)/, '$1-$2');
+            }
+
+            e.target.value = value;
+        });
+    </script>
+</body>
+
+</html>
