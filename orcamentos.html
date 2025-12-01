@@ -38,8 +38,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-3 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="quemsomos.html">Quem Somos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="orcamentos.html">Orçamentos</a></li>
                     </ul>
                 </div>
             </div>
@@ -101,9 +101,12 @@
                                         <label for="servico" class="form-label">Serviço Desejado *</label>
                                         <select class="form-select" id="servico" required>
                                             <option value="" selected disabled>Selecione o serviço</option>
-                                            <option value="portoes">Portões Eletrônicos</option>
                                             <option value="concertinas">Instalação de Concertinas</option>
+                                            <option value="portoes">Portões Eletrônicos</option>
+                                            <option value="cameras">Interfone</option>
+                                            <option value="cameras">Cerca Elétrica</option>
                                             <option value="cameras">Câmeras de Segurança</option>
+                                            <option value="cameras">Serralheria</option>
                                         </select>
                                     </div>
 
@@ -125,9 +128,12 @@
                             <div class="service-info">
                                 <h3>Nossos Serviços</h3>
                                 <ul class="service-list">
+                                      <li><i class="fas fa-check"></i> Instalação de Concertina</li>
                                     <li><i class="fas fa-check"></i> Portões Eletrônicos Automáticos</li>
-                                    <li><i class="fas fa-check"></i> Instalação de Concertinas</li>
+                                    <li><i class="fas fa-check"></i> Interfone</li>
+                                    <li><i class="fas fa-check"></i> Cerca Elétrica</li>
                                     <li><i class="fas fa-check"></i> Câmeras de Segurança</li>
+                                    <li><i class="fas fa-check"></i> Serralheria</li>
                                 </ul>
                             </div>
                         </div>
@@ -168,10 +174,10 @@
                         target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/suaempresa" target="_blank"
+                    <!-- <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/suaempresa" target="_blank"
                         aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </section>
@@ -232,7 +238,7 @@
             mensagem += `%0A*Solicito um orçamento para este serviço.*`;
 
             // Número de WhatsApp da empresa
-            const numeroWhatsApp = '5516993614975';
+            const numeroWhatsApp = '5516991332202';
 
             // Abrir WhatsApp com a mensagem
             window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');

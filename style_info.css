@@ -1,0 +1,365 @@
+:root {
+  --primary-color: #FF6B35;
+  --primary-dark: #E55A2B;
+  --primary-light: #FF8C5A;
+  --dark-color: #2D2D2D;
+  --light-color: #F8F9FA;
+}
+
+.kapakana {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.fonte-fofa {
+  width: 100%;
+  margin: 0;
+  font-family: "Kapakana", cursive;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.titan-one-regular {
+  font-style: normal;
+}
+
+.fonte-grossa {
+  font-family: "Titan One", sans-serif;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  font-weight: 100;
+}
+
+.fonte-texto {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-color);
+  padding-top: 76px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+
+/* NAVBAR E HEADER */
+/* ====== LOGOS HEADER ====== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.logos {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsivo — mantém os logos próximos e ajustados */
+@media (max-width: 992px) {
+  .logo-container {
+    justify-content: center;
+    margin: 0 auto;
+    gap: 8px;
+  }
+
+  .logos {
+    max-width: 120px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-container {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .logos {
+    max-width: 100px;
+  }
+}
+
+.navbar {
+  background-color: var(--primary-dark);
+  box-shadow: 0 2px 10px rgba(198, 93, 12, 0.881);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  gap: 105px;
+}
+
+.navbar-brand {
+  font-size: 1rem;
+  color: var(--light-color);
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--dark-color);
+}
+
+.logo img {
+  height: 70px;
+  margin: 5px;
+}
+
+.menu {
+  margin-top: 10px;
+}
+
+.menu button {
+  background: #d46a00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu button:hover {
+  background: #a04d00;
+}
+
+/* CONTEÚDO PRINCIPAL - ESTRUTURA ANTIGA (mantida para compatibilidade) */
+.conteudo {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.1em;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 20px;
+}
+
+.texto h2 {
+  color: #a04d00;
+  font-style: 900;
+  font-family: "Mulish", sans-serif;
+}
+
+.texto h3 {
+  color: #a04d00;
+  font-style: 900;
+  font-family: "Mulish", sans-serif;
+}
+
+/* NOVA ESTRUTURA - CONTEÚDO ALTERNADO */
+.conteudo-alternado {
+  padding: 40px 0;
+}
+
+.container-alternado {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/* Remove as bordas entre seções */
+.conteudo-alternado .container-alternado:not(:last-child) {
+  border-bottom: none;
+  padding-bottom: 40px;
+}
+
+.imagem-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.imagem-container img:hover {
+  transform: scale(1.02);
+}
+
+.imagem-container .legenda {
+  font-size: 0.85em;
+  color: #a04d00;
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+}
+
+.texto-container {
+  padding: 20px;
+}
+
+.texto-container h2,
+.texto-container h3 {
+  color: #a04d00;
+  margin-bottom: 20px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+}
+
+.texto-container p,
+.texto-container ul,
+.texto-container li {
+  font-family: "Mulish", sans-serif;
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.texto-container ul {
+  padding-left: 20px;
+}
+
+.texto-container li {
+  margin-bottom: 8px;
+}
+
+.titulo {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Estilo antigo de imagem (mantido para referência, mas não usado na nova estrutura) */
+.imagem-card-esquerda {
+  display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container-alternado {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px 15px;
+  }
+  
+  .texto-container {
+    padding: 10px 0;
+  }
+  
+  .texto-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .texto-container h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .conteudo {
+    margin: 40px auto;
+    padding: 20px 15px;
+  }
+  
+  .container-alternado {
+    padding: 15px 10px;
+    gap: 20px;
+  }
+  
+  .texto-container h2 {
+    font-size: 1.6rem;
+  }
+  
+  .fonte-fofa {
+    font-size: 2rem;
+  }
+  
+  .fonte-grossa {
+    font-size: 1.2rem;
+  }
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de fade-in para os containers */
+.container-alternado {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Melhorias para listas */
+.texto-container ul {
+  list-style-type: disc;
+}
+
+.texto-container li strong {
+  color: var(--primary-dark);
+}
+
+/* Destaques no texto */
+.texto-container strong {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+/* CONTEÚDO APENAS TEXTO (sem imagem) */
+.container-apenas-texto {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: start;
+}
+
+.container-apenas-texto .texto-container {
+  padding: 0;
+}
+
+.container-apenas-texto h2,
+.container-apenas-texto h3 {
+  color: #a04d00;
+  margin-bottom: 25px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+}
+
+.container-apenas-texto p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.container-apenas-texto ul {
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* RESPONSIVO para conteúdo apenas texto */
+@media (max-width: 768px) {
+  .container-apenas-texto {
+    padding: 20px 15px;
+  }
+}
